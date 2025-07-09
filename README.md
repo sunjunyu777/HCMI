@@ -7,26 +7,27 @@ official code for Spatial and Temporal-frequency Domain Fusion Network For Video
 torch >= 1.0, torchvision, opencv, numpy, scipy, etc.
 
 ## Take training and testing of Bus dataset for example:
-# Training
-python train.py --dataset bus --epochs 100
+1.Training
+python train.py --data-dir (dataset path)  --roi-path (roi path)  --crop-height (num)  --crop-width (num)  --max-epoch 200
 
-# Testing  
-python test.py --dataset bus --model checkpoint.pth
-```
+2.Testing  
+python test.py --data-dir (dataset path)  --roi-path (roi path)  --save-dir checkpoint.pth
 
-## Results
+3.Set the folder structure should look like this:
+Bus
+├──train
+    ├──ground_truth    
+        ├──xxx_0.h5
+        ├──xxx_10.h5
+        ├──....
+    ├──images
+        ├──xxx_0.jpg
+        ├──xxx_10.jpg
+├──val
+    ├──ground_truth
+    ├──images
+├──test
+    ├──ground_truth
+    ├──images
+├──bus_roi.npy
 
-| Method | Bus MAE | Bus RMSE | Canteen MAE | Canteen RMSE |
-|--------|---------|----------|-------------|--------------|
-| DACM   | 1.35    | 1.78     | 2.45        | 3.12         |
-
-## Citation
-
-```bibtex
-@article{your_paper,
-  title={Your Paper Title},
-  author={Your Name},
-  journal={Your Journal},
-  year={2024}
-}
-```
