@@ -7,12 +7,14 @@ official code for Spatial and Temporal-frequency Domain Fusion Network For Video
 torch >= 1.0, torchvision, opencv, numpy, scipy, etc.
 
 ## Take training and testing of Bus dataset for example:
-##1.Training
+### 1. Training
+```bash
 python train.py --data-dir (dataset path)  --roi-path (roi path)  --crop-height (num)  --crop-width (num)  --max-epoch 200
-
-2.Testing  
+```
+### 2. Testing
+```bash 
 python test.py --data-dir (dataset path)  --roi-path (roi path)  --save-dir checkpoint.pth
-
+```
 3.Set the folder structure should look like this:
 ### 3. Folder Structure
 ```
