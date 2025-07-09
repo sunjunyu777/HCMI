@@ -15,7 +15,6 @@ python train.py --data-dir (dataset path)  --roi-path (roi path)  --crop-height 
 ```bash 
 python test.py --data-dir (dataset path)  --roi-path (roi path)  --save-dir checkpoint.pth
 ```
-3.Set the folder structure should look like this:
 ### 3. Folder Structure
 ```
 Bus/
