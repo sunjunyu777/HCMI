@@ -9,7 +9,7 @@ official code for Hierarchical Cross-Domain Interaction Network for Video Crowd 
 
 ## Install dependencies
 
-torch >= 1.1, torchvision, opencv, numpy, scipy, etc.
+torch >= 1.1, pytorch_wavelets, torchvision, opencv, numpy, scipy, etc.
 
 ## Take training and testing of Bus dataset for example:
 ### 1. download Bus and generate the ground truth maps.
