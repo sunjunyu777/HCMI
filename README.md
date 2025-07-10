@@ -4,16 +4,16 @@ official code for Hierarchical Cross-Domain Interaction Network for Video Crowd 
 
 ## Install dependencies
 
-torch >= 1.0, torchvision, opencv, numpy, scipy, etc.
+torch >= 1.1, torchvision, opencv, numpy, scipy, etc.
 
 ## Take training and testing of Bus dataset for example:
 ### 1. Training
 ```bash
-python train.py --data-dir (dataset path)  --roi-path (roi path)  --crop-height (num)  --crop-width (num)  --max-epoch 200
+python train.py --data-dir (dataset path)  --roi-path (roi path)  --crop-height (num)  --crop-width (num)  --max-epoch (num)
 ```
 ### 2. Testing
 ```bash 
-python test.py --data-dir (dataset path)  --roi-path (roi path)  --save-dir checkpoint.pth
+python test.py --data-dir (dataset path)  --roi-path (roi path)  --save-dir (weight's path)
 ```
 ### 3. Folder Structure
 ```
