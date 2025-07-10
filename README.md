@@ -1,6 +1,6 @@
-# STDNet
+# HCDI
 
-official code for Spatial and Temporal-frequency Domain Fusion Network For Video Crowd Counting.
+official code for Hierarchical Cross-Domain Interaction Network for Video Crowd Counting.
 
 ## Install dependencies
 
