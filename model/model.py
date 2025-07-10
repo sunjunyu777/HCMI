@@ -143,7 +143,7 @@ class CrossAttention(nn.Module):
         return enhanced_feat1
 
 
-class STDnet(nn.Module):
+class HCDI(nn.Module):
     def __init__(self, in_chans=3, out_chans=1, depths=[3, 3, 9, 3], dims=[96, 192, 384, 768], 
                  drop_path_rate=0., layer_scale_init_value=1e-6, head_init_scale=1.,
                  load_pretrained=True, hidden_dim=384, num_heads=8):
@@ -358,7 +358,7 @@ class STDnet(nn.Module):
 
 
 if __name__ == '__main__':
-    model = STDnet(
+    model = HCDI(
         in_chans=3,
         depths=[3, 3, 9, 3],
         dims=[96, 192, 384, 768],
