@@ -2,6 +2,10 @@
 
 official code for Hierarchical Cross-Domain Interaction Network for Video Crowd Counting.
 
+### Dataset
+
+* Bus: [BaiduNetDisk](https://pan.baidu.com/s/18YosH0MWtXZQZ5xf3Y9y_A?pwd=nknu).
+
 ## Install dependencies
 
 torch >= 1.1, torchvision, opencv, numpy, scipy, etc.
