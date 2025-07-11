@@ -9,7 +9,7 @@ from torch.utils.data import DataLoader
 import logging
 import numpy as np
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
-from model.model import HCDI
+from model.model import HCMI
 from dataset.dataset import Crowd
 from glob import glob
 import cv2
@@ -53,7 +53,7 @@ class RegTrainer(Trainer):
                                               num_workers=args.num_workers*self.device_count,
                                               pin_memory=(True if x == 'train' else False))
                                 for x in ['train', 'val']}
-        self.model = HCDI(
+        self.model = HCMI(
             in_chans=3,
             depths=[3, 3, 9, 3],
             dims=[96, 192, 384, 768],
