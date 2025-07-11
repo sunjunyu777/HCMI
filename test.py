@@ -2,7 +2,7 @@ import torch
 import os
 import numpy as np
 from dataset.dataset import Crowd
-from model.model import HCDI
+from model.model import HCMI
 import argparse
 from glob import glob
 import cv2
@@ -33,7 +33,7 @@ def parse_args():
 if __name__ == '__main__':
     args = parse_args()
     os.environ['CUDA_VISIBLE_DEVICES'] = args.device.strip()  # set vis gpu··
-    model = HCDI(
+    model = HCMI(
         in_chans=3,
         depths=[3, 3, 9, 3],
         dims=[96, 192, 384, 768],
@@ -125,9 +125,9 @@ if __name__ == '__main__':
                 sum_res.append(e)
         
         sum_res = np.array(sum_res)
-        mse = np.sqrt(np.mean(np.square(sum_res)))
+        rmse = np.sqrt(np.mean(np.square(sum_res)))
         mae = np.mean(np.abs(sum_res))
-        log_str = f'Final Test: mae {mae:.4f}, mse {mse:.4f}, 总样本数: {len(sum_res)}'
+        log_str = f'Final Test: mae {mae:.4f}, rmse {rmse:.4f}, 总样本数: {len(sum_res)}'
         print(log_str)
 
     elif 'venice' in args.data_dir:
@@ -198,9 +198,9 @@ if __name__ == '__main__':
                 sum_res.append(e)
         
         sum_res = np.array(sum_res)
-        mse = np.sqrt(np.mean(np.square(sum_res)))
+        rmse = np.sqrt(np.mean(np.square(sum_res)))
         mae = np.mean(np.abs(sum_res))
-        log_str = f'Final Test on Venice: mae {mae:.4f}, mse {mse:.4f}, 总样本数: {len(sum_res)}'
+        log_str = f'Final Test on Venice: mae {mae:.4f}, rmse {rmse:.4f}, 总样本数: {len(sum_res)}'
         print(log_str)
 
     else:
@@ -255,7 +255,7 @@ if __name__ == '__main__':
             print(f"{img_name}: 预测误差={epoch_res[j]:.2f}, 真实计数={count:.2f}, 预测计数={count-epoch_res[j]:.2f}")
         
         valid_errors = epoch_res[:valid_img_count]
-        mse = np.sqrt(np.mean(np.square(valid_errors)))
+        rmse = np.sqrt(np.mean(np.square(valid_errors)))
         mae = np.mean(np.abs(valid_errors))
-        log_str = f'Final Test: mae {mae:.4f}, mse {mse:.4f}, 有效样本数: {valid_img_count}'
+        log_str = f'Final Test: mae {mae:.4f}, rmse {rmse:.4f}, 有效样本数: {valid_img_count}'
         print(log_str)
