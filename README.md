@@ -1,6 +1,6 @@
-# HCDI
+# HCMI
 
-official code for Hierarchical Cross-Domain Interaction Network for Video Crowd Counting.
+official code for Hierarchical Cross-Modal Interaction Network for Video Crowd Counting.
 
 ### Dataset
 
@@ -36,7 +36,7 @@ Bus/
 ```
 ### 3. Training
 ```bash
-python train.py --data-dir (dataset path)  --roi-path (roi path)  --crop-height (num)  --crop-width (num)  --max-epoch (num)
+python train.py --data-dir (dataset path)  --roi-path (roi path) 
 ```
 ### 4. Testing
 ```bash 
