@@ -1,6 +1,6 @@
-# HCMI
+# HCDI
 
-official code for Hierarchical Cross-Modal Interaction Network for Video Crowd Counting.
+official code for Hierarchical Cross-Domain Interaction Network for Video Crowd Counting.
 
 ### Dataset
 
