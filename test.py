@@ -2,7 +2,7 @@ import torch
 import os
 import numpy as np
 from dataset.dataset import Crowd
-from model.model import HCMI
+from model.model import HCDI
 import argparse
 from glob import glob
 import cv2
@@ -33,7 +33,7 @@ def parse_args():
 if __name__ == '__main__':
     args = parse_args()
     os.environ['CUDA_VISIBLE_DEVICES'] = args.device.strip()  # set vis gpu··
-    model = HCMI(
+    model = HCDI(
         in_chans=3,
         depths=[3, 3, 9, 3],
         dims=[96, 192, 384, 768],
